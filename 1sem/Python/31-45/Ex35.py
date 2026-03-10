@@ -11,7 +11,7 @@ if a < b:
         a += 2
 
         # para evitar que o programa imprima um valor maior que b
-        if soma < b:
+        if soma <= b:
             print(soma)
 else:
     # caso b seja menor que a
@@ -22,5 +22,5 @@ else:
         b += 2
 
         # para evitar que o programa imprima um valor maior que a
-        if soma < a:
+        if soma <= a:
             print(soma)
