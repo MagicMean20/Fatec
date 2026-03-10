@@ -7,6 +7,11 @@ Mfim = int(input("Quantos minutos do fim do jogo: "))
 Hjogo = Hfim - Hini
 Mjogo = Mfim - Mini
 
+if Hjogo < 0:
+    Hjogo = Hjogo * -1
+if Mjogo < 0:
+    Mjogo = Mjogo * -1
+
 if Hjogo < 23 and Mjogo < 59:
     print(f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}.")
 else:
