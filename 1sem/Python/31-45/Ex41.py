@@ -1,4 +1,4 @@
-# Terminarc = 1
+c = 1
 acerto=0
 
 for d1 in range(1,7):
