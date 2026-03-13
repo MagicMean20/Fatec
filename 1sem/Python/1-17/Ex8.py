@@ -1,4 +1,6 @@
-valor = float(input("Digite o depósito desejado: "))
+valor=0
+while valor <=0:
+    valor = float(input("Digite o depósito desejado: "))
 
 novoVal = valor *1.3
 

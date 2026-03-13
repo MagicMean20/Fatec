@@ -1,5 +1,8 @@
-ano = int(input("Digite seu ano de nascimento: "))
-atual = int(input("Digite o ano atual: "))
+ano=0
+atual=0
+while ano <= 0 or atual <= 0:
+    ano = int(input("Digite seu ano de nascimento: "))
+    atual = int(input("Digite o ano atual: "))
 
 idade = atual - ano
 

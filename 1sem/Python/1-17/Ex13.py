@@ -1,4 +1,6 @@
-quilos = float(input("Digite a quantidade de quilos de alimento: "))
+quilos=0
+while quilos <= 0:
+    quilos = float(input("Digite a quantidade de quilos de alimento: "))
 
 dias = int(quilos / 0.05)
 

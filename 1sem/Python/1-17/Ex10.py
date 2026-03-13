@@ -1,5 +1,8 @@
-r1 = float(input("Digite um número: "))
-r2 = float(input("Digite outro número: "))
+r1=0
+r2=0
+while r1 <= 0 or r2 <= 0:
+    r1 = float(input("Digite um número: "))
+    r2 = float(input("Digite outro número: "))
 
 d = r1 - r2
 

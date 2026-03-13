@@ -1,4 +1,6 @@
-raio = float(input("Digite o raio do círculo: "))
+raio=0
+while raio <=0:
+    raio = float(input("Digite o raio do círculo: "))
 
 comp = 2 * 3.14 * raio
 
