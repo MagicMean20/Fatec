@@ -7,6 +7,8 @@ while r1 <= 0 or r2 <= 0:
 d = r1 - r2
 
 if d < 0:
-    print("O resultado {:.2f}.".format(d))
+    print("A diferença é de {:.2f}.".format(d*(-1)))
+elif d == 0:
+    print("A diferença é 0")
 else:
-    print("O resultado {:.2f}.".format(d))
+    print("A diferença é de {:.2f}.".format(d))
