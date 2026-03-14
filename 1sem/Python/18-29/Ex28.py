@@ -1,5 +1,8 @@
-precoA = float(input("Digite o preço do produto atualmente: "))
-med = float(input("Digite a média de preço do produto: "))
+precoA=0
+med=0
+while precoA <= 0 or med <= 0:
+    precoA = float(input("Digite o preço do produto atualmente: "))
+    med = float(input("Digite a média de preço do produto: "))
 
 # med        precoA     Varia     Ajuste
 # <500 	      <30	       +        10%
