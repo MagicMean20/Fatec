@@ -1,5 +1,8 @@
-base = int(input("Digite a base da potência: "))
-expoente = int(input("Digite o expoente da potência: "))
+base=0
+expoente=0
+while base <= 0 or expoente <= 0:
+    base = int(input("Digite a base da potência: "))
+    expoente = int(input("Digite o expoente da potência: "))
 res = 1
 
 while expoente > 0:

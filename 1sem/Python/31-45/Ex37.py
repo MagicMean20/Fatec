@@ -1,4 +1,6 @@
-N = int(input("Digite um valor: "))
+N=0
+while N <= 0:
+    N = int(input("Digite um valor: "))
 N-=3
 A = 1
 B = 1

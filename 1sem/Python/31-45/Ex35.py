@@ -13,7 +13,7 @@ if a < b:
         # para evitar que o programa imprima um valor maior que b
         if soma <= b:
             print(soma)
-else:
+elif b > a:
     # caso b seja menor que a
     if b % 2 == 0:
         b += 1
@@ -24,3 +24,5 @@ else:
         # para evitar que o programa imprima um valor maior que a
         if soma <= a:
             print(soma)
+else:
+    print("Valores iguais")

@@ -1,4 +1,6 @@
-a = int(input("Digite um número: "))
+a=0
+while a <= 0:
+    a = int(input("Digite um número: "))
 t = 1
 
 while a>1:

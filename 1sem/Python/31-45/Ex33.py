@@ -1,4 +1,6 @@
-dec = int(input("Digite um número: "))
+dec=0
+while dec <= 0:
+    dec = int(input("Digite um número: "))
 s = 1
 d = dec
 
