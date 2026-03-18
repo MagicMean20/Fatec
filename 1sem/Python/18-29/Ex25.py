@@ -16,7 +16,7 @@ if Hjogo < 0:
 if Mjogo < 0:
     Mjogo = Mjogo * -1
 
-if Hjogo < 23 and Mjogo < 59:
+if Hjogo <= 23 and Mjogo <= 59:
     print(f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}.")
 else:
     print("O jogo não pode acontecer.")
