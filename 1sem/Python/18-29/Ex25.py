@@ -8,15 +8,21 @@ while Hini <= 0 or Mini <= 0 or Hfim <= 0 or Mfim <= 0:
     Hfim = int(input("Qual a hora do fim do jogo: "))
     Mfim = int(input("Quantos minutos do fim do jogo: "))
 
-Hjogo = Hfim - Hini
-Mjogo = Mfim - Mini
 
-if Hjogo < 0:
-    Hjogo = Hjogo * -1
-if Mjogo < 0:
-    Mjogo = Mjogo * -1
+def tempoDoJogo():
+    Hjogo = Hfim - Hini
+    Mjogo = Mfim - Mini
 
-if Hjogo < 23 and Mjogo < 59:
-    print(f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}.")
-else:
-    print("O jogo não pode acontecer.")
+    if Hjogo < 0:
+        Hjogo = (Hjogo + 24)
+    if Mjogo < 0:
+        Mjogo = Mjogo * -1
+
+    if Hjogo < 23 and Mjogo < 59:
+        return f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}."
+    elif Hjogo == 24 and Mjogo == 00:
+        return "O jogo está permitido, tendo duração de 24:00."
+    else:
+        return "O jogo não pode acontecer."
+
+print(tempoDoJogo())
