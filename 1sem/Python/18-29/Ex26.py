@@ -16,3 +16,5 @@ def maioredivisivel():
             return f"{n2} é maior que {n1}"
     else:
         return "Números iguais"
+    
+print(maioredivisivel())

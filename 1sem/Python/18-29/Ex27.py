@@ -6,9 +6,9 @@ while voltas <= 0 or tam <= 0 or min <= 0:
     tam = int(input("Qual o tamanho do circuito:"))
     min = int(input("Quantos minutos levou: "))
 
-vmpm = int(voltas * tam / min)
-print(vmpm, " metros por minuto")
+def velocidade():
+    vmpm = int(voltas * tam / min)
+    kmh = vmpm * 3.6
+    return vmpm, " metros por minuto", kmh, "km/h"
 
-# km/h
-kmh = vmpm * 3.6
-print(kmh, "km/h")
+print(velocidade())
