@@ -8,13 +8,16 @@ while nota1 <= 0 or nota2 <= 0 or nota3 <= 0 or nota4 <= 0:
     nota3 = float(input("Digite a nota do terceiro bimestre: "))
     nota4 = float(input("Digite a nota do quarto bimestre: "))
 
-media = (nota1 + nota2 + nota3 + nota4) / 4
+def media():
+    media = (nota1 + nota2 + nota3 + nota4) / 4
 
-if media < 3:
-    print("RETIDO")
+    if media < 3:
+        return "RETIDO"
 
-elif media >= 3 and media < 6:
-    print("EXAME")
+    elif media >= 3 and media < 6:
+        return "EXAME"
 
-else:
-    print("APROVADO")
+    else:
+        return "APROVADO"
+    
+print(media())
