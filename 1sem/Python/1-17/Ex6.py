@@ -1,3 +1,9 @@
+def inverte():
+    global x, y
+    c = x
+    x = y
+    y = c
+
 x=0
 y=0
 while x <= 0 or y <= 0:
@@ -9,9 +15,7 @@ print("O valor de y é:", y)
 
 print("Trocando os valores...")
 
-c = x
-x = y
-y = c
+inverte()
 
 print("O valor de x é:", x)
 print("O valor de y é:", y)
