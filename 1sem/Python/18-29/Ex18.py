@@ -13,3 +13,5 @@ def diferenca():
         return "O primeiro número ({}) é maior que o segundo ({}).".format(n1, n2)
     else:
         return "Os números são iguais."
+    
+print(diferenca())
