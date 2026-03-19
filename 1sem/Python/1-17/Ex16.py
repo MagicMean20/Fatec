@@ -8,10 +8,12 @@ while horas <= 0 or valH <= 0 or depends <= 0 or pesc <= 0:
     depends = int(input("Digite a quantidade de dependentes: "))
     pesc = float(input("Digite o percentual do desconto: "))
 
-desc = pesc / 100
+def salario():
+    desc = pesc / 100
 
-bruto = horas * valH
-descTotal = bruto * desc
-liquido = bruto - descTotal + (depends * 100)
+    bruto = horas * valH
+    descTotal = bruto * desc
+    liquido = bruto - descTotal + (depends * 100)
+    return liquido
 
-print(f"O salário a receber é: R${liquido:.2f}")
+print(f"O salário a receber é: R${salario():.2f}")
