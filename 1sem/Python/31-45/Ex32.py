@@ -1,10 +1,15 @@
+global resultado
+resultado=1
+def fatorial(numero):
+    global resultado
+    while numero>1:
+        resultado *= numero
+        print(resultado)
+        numero-=1
+
+
 a=0
 while a <= 0:
     a = int(input("Digite um número: "))
-t = 1
 
-while a>1:
-    t = t * a
-    a = a - 1
-
-print("O fatorial é: ", t)
+fatorial(a)
