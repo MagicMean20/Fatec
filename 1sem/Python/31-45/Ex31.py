@@ -1,4 +1,4 @@
-def quad():
+def quad(n):
     print (n*n,": Quadrado de",n)
 
 n = 10
