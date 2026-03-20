@@ -1,28 +1,22 @@
+def impares(inicial, final, soma):
+    numero = inicial % 2
+    if numero == 0:
+        inicial += 1
+    while inicial <= final:
+        soma += inicial
+        if soma <= final:
+            print(soma)
+        inicial += 2
+
+
+
 a = int(input("Digite um valor: "))
 b = int(input("Digite outro valor: "))
 soma = 0
 
 if a < b:
-    # caso a seja menor que b
-    if a % 2 == 0:
-        a += 1
-    while soma < b:
-        soma += a
-        a += 2
-
-        # para evitar que o programa imprima um valor maior que b
-        if soma <= b:
-            print(soma)
+    impares(a,b,soma)
 elif b > a:
-    # caso b seja menor que a
-    if b % 2 == 0:
-        b += 1
-    while soma < a:
-        soma += b
-        b += 2
-
-        # para evitar que o programa imprima um valor maior que a
-        if soma <= a:
-            print(soma)
+    impares(b,a,soma)
 else:
     print("Valores iguais")
