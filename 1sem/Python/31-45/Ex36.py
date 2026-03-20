@@ -4,8 +4,11 @@ while n <= 0:
 s = 1
 total=0
 
-while n > 1:
-    C = s/n
-    total += s + C
-    print(n, C, total, "\n")
-    n -= 1
+def somaMod(maxi,mini,res):
+    while maxi > 1:
+        res += mini + (mini/maxi)
+        maxi -= 1
+    else:
+        print(res)
+
+somaMod(n,s,total)
