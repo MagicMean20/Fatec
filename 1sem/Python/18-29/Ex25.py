@@ -19,10 +19,6 @@ def tempoDoJogo():
         Mjogo = Mjogo * -1
 
     if Hjogo < 23 and Mjogo < 59:
-        return f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}."
-    elif Hjogo == 24 and Mjogo == 00:
-        return "O jogo está permitido, tendo duração de 24:00."
+        print(f"O jogo está permitido, tendo duração de {Hjogo}:{Mjogo}.")
     else:
-        return "O jogo não pode acontecer."
-
-print(tempoDoJogo())
+        print("O jogo não pode acontecer.")
