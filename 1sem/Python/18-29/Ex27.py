@@ -11,4 +11,5 @@ def velocidade():
     kmh = vmpm * 3.6
     print(vmpm, "metros por minuto", kmh, "km/h")
 
-print(velocidade())
+if "__name__" == __main__():
+    velocidade()
