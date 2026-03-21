@@ -13,10 +13,10 @@ def diferenca():
     global n1, n2
     dif = n1 - n2
 
-    if dif < 0:
-        print("O segundo número ({}) é maior que o primeiro ({}).".format(n2, n1))
-    elif dif > 0:
-        print("O primeiro número ({}) é maior que o segundo ({}).".format(n1, n2))
+    if dif != 0:
+        if dif < 0:
+            dif *= -1
+        print(dif, "é a diferença entre eles")
     else:
         print("Os números são iguais.")
     
