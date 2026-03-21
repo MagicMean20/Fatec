@@ -2,7 +2,7 @@ cont = 0
 max = 0
 min = 0
 
-while cont < 10:
+while cont < 100:
     num = int(input(f"Digite um número({cont + 1}): "))
     if num < 0:
         print("Número inválido. Digite um número positivo.")
