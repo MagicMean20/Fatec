@@ -9,6 +9,6 @@ while voltas <= 0 or tam <= 0 or min <= 0:
 def velocidade():
     vmpm = int(voltas * tam / min)
     kmh = vmpm * 3.6
-    return vmpm, " metros por minuto", kmh, "km/h"
+    print(vmpm, "metros por minuto", kmh, "km/h")
 
 print(velocidade())
