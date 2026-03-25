@@ -11,7 +11,7 @@ def __main__():
 def velocidade(voltas,tamanho,minuto):
     vmpm = int(voltas * tamanho / minuto)
     kmh = vmpm * 3.6
-    print(vmpm, "metros por minuto", kmh, "km/h")
+    print(vmpm, "metros por minuto ou", kmh, "km/h")
 
 if "__name__" == __main__():
     velocidade()
