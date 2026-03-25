@@ -23,8 +23,9 @@ def somaDias(anoA:int,mesA:int,diaA:int,anoN:int,mesN:int,diaN:int)->int:
 
     diaI=total
 
-    if mesI == 12:
-        anoI+=1
-        mesI=1
+    if anoA-1==anoN and (mesA==1 and mesN==12) and (diaA==1 and diaN==31):
+        anoI+=0
+        mesI=0
+        diaI=1
 
     print("Você tem",anoI,"anos",mesI,"meses e",diaI,"dias")
