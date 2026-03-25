@@ -8,7 +8,7 @@ diaI=0
 
 def __main__():
     global aa,ma,da,an,mn,dn
-    print("Descubra a seguir qual sua idade em anos, meses e dias") 
+    print("Descubra a seguir qual sua idade em\nanos, meses e dias") 
     an = int(input("Digite o ano de seu nascimento: ")) 
     mn = int(input("Digite o mês de seu nascimento: ")) 
     dn = int(input("Digite o dia de seu nascimento: ")) 
