@@ -28,10 +28,10 @@ def grava(cont,res):
     tipo = 'w'
     file = dir + arq
     enc = 'utf-8'
-    if (os.path.exists(file) and cont > 0):
+    if (os.path.exists(file)):
         tipo = 'a'
     with open(file,tipo,encoding=enc) as f:
-            f.write(linha)
+        f.write(linha)
 
 def main():
     global valor,dir
