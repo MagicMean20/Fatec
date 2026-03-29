@@ -1,7 +1,7 @@
 import os
 
 global dir,arq,nome,nota1,nota2,nota3,nota4,media
-dir = '/home/henrique/Download/exercicios/'
+dir = '/tmp/exercicios/'
 arq = 'Ex21.txt'
 nome = ''
 nota1,nota2,nota3,nota4,media = 0.0,0.0,0.0,0.0,0.0
@@ -24,7 +24,7 @@ def med(n1,n2,n3,n4):
 def cadastro(nome,nota1,nota2,nota3,nota4,media):
     global dir,arq
     linha = ''
-    dir = '/home/henrique/Download/exercicios/'
+    dir = '/tmp/exercicios/'
     arq = 'Ex21.txt'
     linha = nome + ': ' + str(nota1) + '; ' + str(nota2) + '; ' + str(nota3) + '; ' + str(nota4) + '; ' + f'{media:.2f}' + '\n'
     escreveArq(dir,arq,linha)
