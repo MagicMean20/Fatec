@@ -2,7 +2,7 @@ import os
 
 global dir,arq,min,max,linha
 dir='/home/henrique/Download/exercicios/'
-arq='Ex38.2.txt'
+arq='Ex38.txt'
 linha=''
 min=0
 max=0
