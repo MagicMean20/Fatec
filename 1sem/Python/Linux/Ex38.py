@@ -1,7 +1,7 @@
 import os
 
 global dir,arq,min,max,linha
-dir='/home/henrique/Download/exercicios/'
+dir='/home/henrique/Download/exercicios/Ex38/'
 arq='Ex38.txt'
 linha=''
 min=0
@@ -30,11 +30,13 @@ def entra(c):
             if (int(num) < min):
                 min = int(num)
         n += num + '; '
+        mult5(int(num))
         if abc == 9:
-            grava(min,max,n,abc,c)
+            grava(min,max,n,c)
 
-def grava(min,max,num,a,c):
+def grava(min,max,num,c):
     global dir,arq,linha
+    arq = 'Ex38.txt'
     file = dir + arq
     linha = ''
 
@@ -52,6 +54,24 @@ def grava(min,max,num,a,c):
         with open(file,tipo,encoding=enc) as f:
             f.write(linha + '\n')
 
+def mult5(numero):
+    global dir,arq
+    arq = 'Ex38_mult5.txt'
+    tipo = ''
+    enc= 'utf-8'
+    file = dir + arq
+    if numero == 0:
+        return
+    if numero % 5 == 0:
+        if (os.path.isdir(dir) and os.path.exists(dir)):
+            tipo = 'w'
+        if (os.path.exists(file)):
+            tipo='a'
+        with open(file,tipo,encoding=enc) as f:
+            f.write(str(numero) + '\n')
+    else:
+        return
+
 def main():
     global dir,linha
     os.makedirs(dir, exist_ok=True)
@@ -62,8 +82,7 @@ def main():
         print(f'Dezena de dígitos confirmada ({cont+1})')
         linha = ''
 
-# lembrar de trocar os range 2 e elif 2 por 11
-# tentar realocar a lógica de gravação pq n tá aparecendo o min e max no arquivo
+# criar algoritmo que leia o arquivo e guarde em outro aqueles números multipos de 5
 
 if __name__ == "__main__":
     main()
