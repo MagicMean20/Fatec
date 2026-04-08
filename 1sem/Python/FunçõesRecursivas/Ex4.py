@@ -6,7 +6,7 @@ def div(n,c,t):
 
 def main():
     n = int(input('Digite um valor para N: '))
-    tot = n-1
+    tot = n
     c=1
     div(n,c,tot)
 
