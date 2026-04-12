@@ -2,26 +2,27 @@
 gran:.asciiz"Digite um numero grande: "
 ze:.asciiz"Proibida a divisao por 0\n"
 peq:.asciiz"Digite um numero menor: "
-res:.asciiz"Total: "
+res:.asciiz"Resto: "
 n:.asciiz"\n"
 .text
 
 main:
+bgtz $t1,num2
 li $v0,4
 la $a0,gran
 syscall
 li $v0,5
 syscall
 add $t1,$v0,$zero
-beqz $t1,novot1
 
+num2:
 li $v0,4
 la $a0,peq
 syscall
 li $v0,5
 syscall
 add $t2,$v0,$zero
-beqz $t2,novot2
+beqz $t2,novot
 
 continua:
 bgt $t2,$t1,troca
@@ -30,39 +31,26 @@ j dividir
 j fim
 
 troca:
-add $t3,$t1,$zero   # t3 = t1
-add $t1,$t2,$zero   # t1 = t2
-add $t2,$t3,$zero   # t2 = t3
+move $t3,$t1   # t3 = t1
+move $t1,$t2   # t1 = t2
+move $t2,$t3   # t2 = t3
 j continua
 
 dividir:
-# falta esse pedaço
-div $t0,$t1,$t2
+sub $t1,$t1,$t2
+blt $t1,$t2,fim
+j dividir
 
-novot1:
+novot:
 li $v0,4
 la $a0,ze
 syscall
-li $v0,4
-la $a0,gran
-syscall
-li $v0,1
-syscall
-add $t1,$v0,$zero
-beqz $t1,novot1
-j continua
-
-novot2:
-li $v0,4
-la $a0,ze
-syscall
-li $v0,4
-la $a0,peq
-syscall
-li $v0,1
-syscall
-add $t2,$v0,$zero
-beqz $t2,novot2
-j continua
+j main
 
 fim:
+li $v0,4
+la $a0,res
+syscall
+li $v0,1
+add $a0,$t1,$zero
+syscall
